@@ -6,12 +6,11 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/04 19:20:07 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/04 19:54:50 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
-
 #include <stdio.h>
 
 int ft_printf()
