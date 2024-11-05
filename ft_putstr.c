@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/05 11:05:45 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/11/05 11:12:30 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/11/05 11:12:30 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h> //teste
-
-int	ft_printf(const char *format, ...)
+void	ft_putstr_fd(char *s, int fd)
 {
-	
+	while (*s != '\0')
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
