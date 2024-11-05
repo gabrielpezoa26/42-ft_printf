@@ -3,9 +3,7 @@ CFLAGS = -Wall -Wextra -Werror $(INCLUDES)
 
 INCLUDES = -Ilibft
 
-LIBFT = ./libft/libft.a
-
-NAME = ft_printf
+NAME = libftftprintf.a
 
 SRCS = ft_printf/ft_printf.c
 

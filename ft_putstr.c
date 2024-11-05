@@ -6,15 +6,17 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:12:30 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/05 11:12:30 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:05:19 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr_fd(char *s, int fd)
+#include "ft_printf.h"
+
+void	ft_putstr(char *s)
 {
 	while (*s != '\0')
 	{
-		ft_putchar_fd(*s, fd);
+		ft_putchar(*s);
 		s++;
 	}
 }

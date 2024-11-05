@@ -6,11 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:12:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/05 11:12:10 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:50:11 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar_fd(char c, int fd)
+#include "ft_printf.h"
+
+void	ft_putchar(char c)
 {
-	write(fd, &c, 1);
+	write(1, &c, 1);
 }
