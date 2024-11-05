@@ -1,3 +1,7 @@
 # 42-ft_printf
 
-testeee
+- estudar funções variádicas
+
+- usar libft
+
+- 
