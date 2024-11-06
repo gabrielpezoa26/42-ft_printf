@@ -3,55 +3,58 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/06 14:00:14 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/06 19:11:35 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-static int	ft_verify_format(const char *id, size_t to_print, int final_count)
+static size_t	ft_verify_type(const char x, va_list beans)
 {
-	if (*id == 'c')
-		ft_putchar(to_print, to_print);
-	return (final_count);
+	size_t	kartoffel;
+
+	kartoffel = 0;
+	if (x == 'c')
+		kartoffel += ft_putchar(va_arg(beans, int));
+	else if (x == '%')
+		kartoffel += ft_putchar('%');
+	return (kartoffel);
 }
-
-int	ft_printf(const char *format, ...)
-{	
-	char	id;
-	size_t	to_print;
-	int		potato;
-
-	ft_verify_format(format, to_print, potato);
-	return (0);
+int	ft_printf(const char *mango_loko, ...)
+{
+	char	*potato;
+	va_list	beans;
+	size_t i;
+	size_t	arg_counter;
+	
+	potato = "cspdiuxXs%";
+	i = 0;
+	arg_counter = 0;
+	va_start(beans, mango_loko);
+	while(mango_loko[i] != '\0')
+	{
+		if ((mango_loko[i] == '%') && ft_strchr(potato, mango_loko[i + 1]))
+		{
+			arg_counter += ft_verify_type(mango_loko[i + 1], beans);
+			++i;
+		}
+		else
+			arg_counter += ft_putchar(mango_loko[i]);
+		i++;
+	}
+	va_end(beans);
+	return (arg_counter);
 }
 
 int	main(void)
 {
-	char	potato = 'a';
+	char	potato = 'y';
 
 	ft_printf("%c\n", potato);
 	//printf("%c\n", potato);
 	return (0);
 }
-
-/*	if (id == 's')
-		ft_putstr();
-	if (id == 'p')
-		return (aaa);
-	if (id == 'd')
-		ft_putnbr();
-	if (id == 'i')
-		ft_putnbr();
-	if (id == 'u')
-		ft_putnbr();
-	if (id == 'x')
-		//dsahdsaudsa
-	if (id == 'X')
-		//uidagsadsa
-	if (id == '%')
-		ft_putchar('%');*/
