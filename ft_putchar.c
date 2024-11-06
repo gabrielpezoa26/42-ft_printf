@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:12:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/05 14:51:10 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/05 23:27:00 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(char c, size_t final_count)
 {
 	write(1, &c, 1);
+	final_count++;
 }

@@ -5,7 +5,10 @@ INCLUDES = -Ilibft
 
 NAME = libftftprintf.a
 
-SRCS = ft_printf/ft_printf.c
+SRC = 	ft_printf.c\
+		ft_putchar\
+		ft_putnbr.c\
+		ft_putstr\
 
 OBJS = $(SRCS:.c=.o)
 
