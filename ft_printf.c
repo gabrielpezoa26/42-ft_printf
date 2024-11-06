@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/06 12:43:39 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:00:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	ft_verify_format(const char *id, size_t to_print, int final_count)
 {
-	if (*id[1] == 'c')
+	if (*id == 'c')
 		ft_putchar(to_print, to_print);
 	return (final_count);
 }
