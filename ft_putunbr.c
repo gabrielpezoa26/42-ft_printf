@@ -6,12 +6,12 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:20:01 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/07 16:35:58 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:50:57 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h> //apagaarrrrrrrrrrrrrrrrr
+
 int	ft_putunbr(int n)
 {
 	long	num;

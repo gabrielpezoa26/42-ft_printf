@@ -6,12 +6,11 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/07 17:42:55 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:13:27 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h> //aaaaaaaaaaaaaa
 
 static size_t	ft_verify_type(const char x, va_list arg_box)
 {
@@ -46,7 +45,7 @@ int	ft_printf(const char *format, ...)
 	va_start(arg_box, format);
 	while (format[i] != '\0')
 	{
-		if ((format[i] == '%') && ft_strchr(type, format[i + 1]))
+		if ((format[i] == '%') && ft_strchr(type, format[i + 1])) // && ft_strchr(type, format[i + 1]) != 0)
 		{
 			arg_counter += ft_verify_type(format[i + 1], arg_box);
 			i++;
@@ -56,7 +55,7 @@ int	ft_printf(const char *format, ...)
 		i++;
 	}
 	va_end(arg_box);
-	printf("%zu\n", arg_counter);
+	printf("contador de args: %zu\n", arg_counter);
 	return (arg_counter);
 }
 
@@ -78,8 +77,8 @@ int	main(void)
 	printf("%c\n", test_c);*/
 	//ft_printf("%u\n", test_u);
 	//printf("%u", test_u);
-	ft_printf("%p", (void *)test_p);
+	ft_printf("endereco de test_p printf fake: %p\n", (void *)test_p);
 	printf("\n");
-	printf("%p", (void *)test_p);
+	printf("endereco de test_p printf original: %p", (void *)test_p);
 	return (0);
 }
