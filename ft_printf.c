@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/07 10:54:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:03:39 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,16 +54,18 @@ int	ft_printf(const char *format, ...)
 	return (arg_counter);
 }
 
-// int	main(void)
-// {
+int	main(void)
+{
 // 	char	potato = 'y';
 // 	char	fisch_kuchen = 'p';
 // 	//char	*kaputt = "abcdef";
 // 	int		estojo = 123;
+	char	percent;
 
+	ft_printf("%%\n", percent);
 // 	ft_printf("%c\n\n\n\n\n%c\n", potato, fisch_kuchen);
 // 	//ft_printf("%s\n", kaputt);
 // 	//ft_printf("%i\n", estojo);
 // 	// printf("%c\n", potato);
-// 	return (0);
-// }
+ 	return (0);
+}
