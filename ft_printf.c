@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/06 22:08:36 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/06 23:12:54 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static size_t	ft_verify_type(const char x, va_list beans)
 		kartoffel += ft_putchar('%');
 	return (kartoffel);
 }
+
 int	ft_printf(const char *mango_loko, ...)
 {
 	char	*potato;
