@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/07 11:03:39 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:20:39 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static size_t	ft_verify_type(const char x, va_list arg_box)
 		result += ft_putchar(va_arg(arg_box, int));
 	if (x == 's')
 		result += ft_putstr(va_arg(arg_box, char *));
+	if (x == 'i')
+		result += ft_putnbr(va_arg(arg_box, int));
 	else if (x == '%')
 		result += ft_putchar('%');
 	return (result);
@@ -59,13 +61,13 @@ int	main(void)
 // 	char	potato = 'y';
 // 	char	fisch_kuchen = 'p';
 // 	//char	*kaputt = "abcdef";
-// 	int		estojo = 123;
-	char	percent;
+ 	int		estojo = 123;
+//	char	percent;
 
-	ft_printf("%%\n", percent);
+//	ft_printf("%%\n", percent);
 // 	ft_printf("%c\n\n\n\n\n%c\n", potato, fisch_kuchen);
 // 	//ft_printf("%s\n", kaputt);
-// 	//ft_printf("%i\n", estojo);
+ 	ft_printf("%i\n", estojo);
 // 	// printf("%c\n", potato);
  	return (0);
 }
