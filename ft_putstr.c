@@ -3,20 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:12:30 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/06 12:09:59 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/06 22:07:30 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
-	while (*s != '\0')
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		ft_putchar(*s);
-		s++;
+		ft_putchar(s[i]);
+		i++;
 	}
+	i -= 1;
+	return (i);
 }

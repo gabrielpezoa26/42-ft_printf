@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/06 19:14:17 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/06 21:56:37 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 int		ft_printf(const char *mango_loko, ...);
-void	ft_putstr(char *s);
+int		ft_putstr(char *s);
 int		ft_putchar(char c);
 void	ft_putnbr(int n);
 char	*ft_strchr(const char *s, int c);
