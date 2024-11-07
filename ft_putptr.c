@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 11:11:20 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/07 17:34:43 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/11/07 17:32:06 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/11/07 17:43:57 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_putptr(void *y)
 {
-	long	num;
-	
-	num = (long)n;
-	if (num < 0)
-	{
-		write(1, "-", 1);
-		num = -num;
-	}
-	if (num > 9)
-		ft_putnbr(num / 10);
-	write(1, &((char){num % 10 + '0'}), 1);
+	write(1, &y, 1);
 	return (1);
 }
