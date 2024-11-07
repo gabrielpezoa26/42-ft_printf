@@ -3,66 +3,67 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/06 23:13:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/07 10:54:57 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h> //aaaaaaaaaaaaaa
 
-static size_t	ft_verify_type(const char x, va_list beans)
+static size_t	ft_verify_type(const char x, va_list arg_box)
 {
-	size_t	kartoffel;
+	size_t	result;
 
-	kartoffel = 0;
+	result = 0;
 	if (x == 'c')
-		kartoffel += ft_putchar(va_arg(beans, int));
+		result += ft_putchar(va_arg(arg_box, int));
 	if (x == 's')
-		kartoffel += ft_putstr(va_arg(beans, char *));
+		result += ft_putstr(va_arg(arg_box, char *));
 	else if (x == '%')
-		kartoffel += ft_putchar('%');
-	return (kartoffel);
+		result += ft_putchar('%');
+	return (result);
 }
 
-int	ft_printf(const char *mango_loko, ...)
+int	ft_printf(const char *format, ...)
 {
-	char	*potato;
-	va_list	beans;
-	size_t i;
+	char	*type;
+	va_list	arg_box;
+	size_t	i;
 	size_t	arg_counter;
-	
-	potato = "cspdiuxXs%";
+
+	type = "cspdiuxXs%";
 	i = 0;
 	arg_counter = 0;
-	va_start(beans, mango_loko);
-	while(mango_loko[i] != '\0')
+	va_start(arg_box, format);
+	while (format[i] != '\0')
 	{
-		if ((mango_loko[i] == '%') && ft_strchr(potato, mango_loko[i + 1]))
+		if ((format[i] == '%') && ft_strchr(type, format[i + 1]))
 		{
-			arg_counter += ft_verify_type(mango_loko[i + 1], beans);
+			arg_counter += ft_verify_type(format[i + 1], arg_box);
 			i++;
 		}
 		else
-			arg_counter += ft_putchar(mango_loko[i]);
+			arg_counter += ft_putchar(format[i]);
 		i++;
 	}
-	va_end(beans);
-	;
-	printf("%zu\n", arg_counter); // testeeeeee
+	va_end(arg_box);
+	printf("%zu\n", arg_counter);
 	return (arg_counter);
 }
 
-int	main(void)
-{
-	//char	potato = 'y';
-	//char	fisch_kuchen = 'p';
-	char	*kaputt = "abcdef";
+// int	main(void)
+// {
+// 	char	potato = 'y';
+// 	char	fisch_kuchen = 'p';
+// 	//char	*kaputt = "abcdef";
+// 	int		estojo = 123;
 
-	//ft_printf("%c\n\n\n\n\n%c\n", potato, fisch_kuchen);
-	ft_printf("%s\n", kaputt);
-	// printf("%c\n", potato);
-	return (0);
-}
+// 	ft_printf("%c\n\n\n\n\n%c\n", potato, fisch_kuchen);
+// 	//ft_printf("%s\n", kaputt);
+// 	//ft_printf("%i\n", estojo);
+// 	// printf("%c\n", potato);
+// 	return (0);
+// }
