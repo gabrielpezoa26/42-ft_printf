@@ -6,12 +6,12 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/06 23:12:54 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/06 23:13:26 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
+#include <stdio.h> //aaaaaaaaaaaaaa
 
 static size_t	ft_verify_type(const char x, va_list beans)
 {
