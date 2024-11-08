@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:32:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/07 22:52:17 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/07 23:28:32 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 static int	ft_print_hex(unsigned long n)
 {
-	char *hex_digits = "0123456789abcdef";
-	int  kopf_schmerzennn = 0;
+	char	*hex_digits;
+	int		kopf_schmerzennn;
 
+	kopf_schmerzennn = 0;
+	hex_digits = "0123456789abcdef";
 	if (n >= 16)
 		kopf_schmerzennn += ft_print_hex(n / 16);
 	kopf_schmerzennn += ft_putchar(hex_digits[n % 16]);
@@ -34,7 +36,8 @@ int	ft_putptr(void *y)
 	if (mango_loko == 0) //tratativa derro
 	{
 		count += ft_putchar('0');
-	} else
+	}
+	else
 	{
 		count += ft_print_hex(mango_loko);
 	}

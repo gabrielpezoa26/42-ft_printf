@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/07 21:58:55 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/07 23:37:39 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,16 @@ static size_t	ft_verify_type(const char x, va_list arg_box)
 		result += ft_putchar(va_arg(arg_box, int));
 	if (x == 's')
 		result += ft_putstr(va_arg(arg_box, char *));
+	if (x == 'p')
+		result += ft_putptr(va_arg(arg_box, void *));
+	if (X == 'd')
+		result += ft_putnbr(va_arg(arg_box, int));
 	if (x == 'i')
 		result += ft_putnbr(va_arg(arg_box, int));
 	if (x == 'u')
 		result += ft_putunbr(va_arg(arg_box, unsigned int));
-	if (x == 'p')
-		result += ft_putptr(va_arg(arg_box, void *));
+	if (x == 'x')
+		//aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	else if (x == '%')
 		result += ft_putchar('%');
 	return (result);
