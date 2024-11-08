@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/08 18:26:56 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:31:19 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_printf(const char *format, ...)
 	va_start(arg_box, format);
 	while (format[i] != '\0')
 	{
-		if ((format[i] == '%') && ft_strchr(type, format[i + 1])) // && ft_strchr(type, format[i + 1]) != 0)
+		if ((format[i] == '%') && ft_strchr(type, format[i + 1]))
 		{
 			arg_counter += ft_verify_type(format[i + 1], arg_box);
 			i++;

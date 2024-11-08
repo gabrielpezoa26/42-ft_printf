@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:20:01 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/07 17:50:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:32:15 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_putunbr(int n)
 {
 	long	num;
-	
+
 	num = (long)n;
 	if (num >= 0)
 	{
