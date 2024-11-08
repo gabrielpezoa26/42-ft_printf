@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/07 18:13:27 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/07 21:58:55 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ int	main(void)
 	//printf("%u", test_u);
 	ft_printf("endereco de test_p printf fake: %p\n", (void *)test_p);
 	printf("\n");
-	printf("endereco de test_p printf original: %p", (void *)test_p);
+	printf("endereco de test_p printf original: %p\n", (void *)test_p);
 	return (0);
 }
