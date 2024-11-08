@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr_hex.c                                    :+:      :+:    :+:   */
+/*   batata.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 10:26:56 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/08 10:30:14 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/11/08 17:11:39 by gabriel           #+#    #+#             */
+/*   Updated: 2024/11/08 17:17:13 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_print_hex_uppercase(unsigned long n)
+static int	ft_print_hex_lowercase(unsigned long n)
 {
 	char	*hex_digits;
 	int		caneta;
@@ -22,13 +22,13 @@ static int	ft_print_hex_uppercase(unsigned long n)
 	if (n >= 16)
 	{
 		caneta += 32;
-		caneta += ft_print_hex_uppercase(n / 16);
+		caneta += ft_print_hex_lowercase(n / 16);
 	}
 	caneta += ft_putchar(hex_digits[n % 16]);
 	return (caneta);
 }
 
-static int	ft_print_hex_uppercase(unsigned long n)
+static int	ft_print_hex_lowercase(unsigned long n)
 {
 	char	*hex_digits;
 	int		caneta;
@@ -38,7 +38,7 @@ static int	ft_print_hex_uppercase(unsigned long n)
 	if (n >= 16)
 	{
 		caneta -= 32;
-		caneta += ft_print_hex_uppercase(n / 16);
+		caneta += ft_print_hex_lowercase(n / 16);
 	}
 	caneta += ft_putchar(hex_digits[n % 16]);
 	return (caneta);
@@ -58,7 +58,7 @@ int	ft_putptr(void *y)
 	}
 	else
 	{
-		count += ft_print_hex_uppercase(mango_loko);
+		count += ft_print_hex_lowercase(mango_loko);
 	}
 	return (count);
 }

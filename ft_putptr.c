@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:32:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/08 10:29:30 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:32:33 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_print_hex_uppercase(unsigned long n)
+static int	ft_print_hex_lowercase(unsigned long n)
 {
-	char	*hex_digits;
+	char	*hex_digits_lower;
 	int		kopf_schmerzennn;
 
 	kopf_schmerzennn = 0;
-	hex_digits = "0123456789abcdef";
+	hex_digits_lower = "0123456789abcdef";
 	if (n >= 16)
-		kopf_schmerzennn += ft_print_hex_uppercase(n / 16);
-	kopf_schmerzennn += ft_putchar(hex_digits[n % 16]);
+		kopf_schmerzennn += ft_print_hex_lowercase(n / 16);
+	kopf_schmerzennn += ft_putchar(hex_digits_lower[n % 16]);
 	return (kopf_schmerzennn);
 }
 
@@ -34,12 +34,10 @@ int	ft_putptr(void *y)
 	mango_loko = (unsigned long)y; //castinggg
 	count = ft_putstr("0x") + count;
 	if (mango_loko == 0) //tratativa derro
-	{
 		count += ft_putchar('0');
-	}
-	else
-	{
+	else if (mango_loko == 'x')
+		count += ft_print_hex_lowercase(mango_loko);
+	else if (mango_loko == 'X')
 		count += ft_print_hex_uppercase(mango_loko);
-	}
 	return (count);
 }

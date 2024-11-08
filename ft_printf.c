@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/07 23:45:24 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 17:36:04 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ static size_t	ft_verify_type(const char id, va_list arg_box)
 	if (id == 'u')
 		result += ft_putunbr(va_arg(arg_box, unsigned int));
 	if (id == 'x')
-		//aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		result += ft_print_hex_lower(va_arg(arg_box, unsigned int));
 	if (id == 'X')
-		//bbbbbbbbbbbbb
+		result += ft_print_hex_upper(va_arg(arg_box, unsigned int));
 	if (id == '%')
 		result += ft_putchar('%');
 	return (result);
@@ -45,7 +45,7 @@ int	ft_printf(const char *format, ...)
 	size_t	i;
 	size_t	arg_counter;
 
-	type = "cspdiuxXs%";
+	type = "cspdiuxX%";
 	i = 0;
 	arg_counter = 0;
 	va_start(arg_box, format);
@@ -83,8 +83,9 @@ int	main(void)
 	printf("%c\n", test_c);*/
 	//ft_printf("%u\n", test_u);
 	//printf("%u", test_u);
-	ft_printf("endereco de test_p printf fake: %p\n", (void *)test_p);
+	/*ft_printf("endereco de test_p printf fake: %p\n", (void *)test_p);
 	printf("\n");
 	printf("endereco de test_p printf original: %p\n", (void *)test_p);
-	return (0);
+	return (0);*/
+	
 }

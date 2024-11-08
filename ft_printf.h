@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/07 23:45:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:21:52 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int		ft_putchar(char c);
 int		ft_putnbr(int n);
 int		ft_putunbr(int n);
 int		ft_putptr(void *y);
-void	ft_puthex(int n);
-char *ft_strchr(const char *s, int c);
+int		ft_print_hex_upper(unsigned long n);
+int		ft_print_hex_lower(unsigned long n);
+char	*ft_strchr(const char *s, int c);
 
 #endif
