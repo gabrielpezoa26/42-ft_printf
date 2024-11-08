@@ -6,32 +6,34 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/07 23:37:39 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/07 23:45:24 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	ft_verify_type(const char x, va_list arg_box)
+static size_t	ft_verify_type(const char id, va_list arg_box)
 {
 	size_t	result;
 
 	result = 0;
-	if (x == 'c')
+	if (id == 'c')
 		result += ft_putchar(va_arg(arg_box, int));
-	if (x == 's')
+	if (id == 's')
 		result += ft_putstr(va_arg(arg_box, char *));
-	if (x == 'p')
+	if (id == 'p')
 		result += ft_putptr(va_arg(arg_box, void *));
-	if (X == 'd')
+	if (id == 'd')
 		result += ft_putnbr(va_arg(arg_box, int));
-	if (x == 'i')
+	if (id == 'i')
 		result += ft_putnbr(va_arg(arg_box, int));
-	if (x == 'u')
+	if (id == 'u')
 		result += ft_putunbr(va_arg(arg_box, unsigned int));
-	if (x == 'x')
+	if (id == 'x')
 		//aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-	else if (x == '%')
+	if (id == 'X')
+		//bbbbbbbbbbbbb
+	if (id == '%')
 		result += ft_putchar('%');
 	return (result);
 }

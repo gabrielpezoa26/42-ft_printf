@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 23:37:57 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/07 23:40:46 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/07 23:45:45 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,5 @@ void	ft_puthex(int n)
 	int	potato;
 
 	potato = n / 16;
+	return (potato); //ta td erradoooooooo resolver amnh
 }

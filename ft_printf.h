@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/07 17:50:32 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:45:26 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		ft_putchar(char c);
 int		ft_putnbr(int n);
 int		ft_putunbr(int n);
 int		ft_putptr(void *y);
-char	*ft_strchr(const char *s, int c);
+void	ft_puthex(int n);
+char *ft_strchr(const char *s, int c);
 
 #endif
