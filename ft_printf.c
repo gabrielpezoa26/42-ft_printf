@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/08 17:36:04 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:26:56 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,29 +63,4 @@ int	ft_printf(const char *format, ...)
 	va_end(arg_box);
 	printf("contador de args: %zu\n", arg_counter);
 	return (arg_counter);
-}
-
-int	main(void)
-{
-	char	test_c = 'y';
-	//char	test_c = 'p';
-	char	*test_s = "abcdef";
-	int		test_i = 123;
-	char	test_percent = '%';
-	int		test_u = -123;
-	int		diego = 3;
-	void	*test_p = &diego;
-	
-	/*ft_printf("%%\n", test_percent);
-	ft_printf("%c\n\n\n\n\n%c\n", test_c, test_c);
-	ft_printf("%s\n", test_s);
-	ft_printf("%i\n", test_i);
-	printf("%c\n", test_c);*/
-	//ft_printf("%u\n", test_u);
-	//printf("%u", test_u);
-	/*ft_printf("endereco de test_p printf fake: %p\n", (void *)test_p);
-	printf("\n");
-	printf("endereco de test_p printf original: %p\n", (void *)test_p);
-	return (0);*/
-	
 }

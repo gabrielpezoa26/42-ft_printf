@@ -6,13 +6,13 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:11:39 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/08 17:17:13 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:24:59 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_print_hex_lowercase(unsigned long n)
+static int	caneta_azul(unsigned long n)
 {
 	char	*hex_digits;
 	int		caneta;
@@ -22,13 +22,13 @@ static int	ft_print_hex_lowercase(unsigned long n)
 	if (n >= 16)
 	{
 		caneta += 32;
-		caneta += ft_print_hex_lowercase(n / 16);
+		caneta += caneta_azul(n / 16);
 	}
 	caneta += ft_putchar(hex_digits[n % 16]);
 	return (caneta);
 }
 
-static int	ft_print_hex_lowercase(unsigned long n)
+static int	caneta_azul(unsigned long n)
 {
 	char	*hex_digits;
 	int		caneta;
@@ -38,7 +38,7 @@ static int	ft_print_hex_lowercase(unsigned long n)
 	if (n >= 16)
 	{
 		caneta -= 32;
-		caneta += ft_print_hex_lowercase(n / 16);
+		caneta += caneta_azul(n / 16);
 	}
 	caneta += ft_putchar(hex_digits[n % 16]);
 	return (caneta);
@@ -58,7 +58,7 @@ int	ft_putptr(void *y)
 	}
 	else
 	{
-		count += ft_print_hex_lowercase(mango_loko);
+		count += caneta_azul(mango_loko);
 	}
 	return (count);
 }

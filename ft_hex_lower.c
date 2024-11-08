@@ -6,11 +6,11 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:33:48 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/08 18:22:08 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:28:06 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_hex_lower(unsigned long n)
 {
