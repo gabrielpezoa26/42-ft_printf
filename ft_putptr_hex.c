@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*   ft_putptr_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 17:32:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/08 10:29:30 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/11/08 10:26:56 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/11/08 10:30:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,33 @@
 static int	ft_print_hex_uppercase(unsigned long n)
 {
 	char	*hex_digits;
-	int		kopf_schmerzennn;
+	int		caneta;
 
-	kopf_schmerzennn = 0;
+	caneta = 0;
 	hex_digits = "0123456789abcdef";
 	if (n >= 16)
-		kopf_schmerzennn += ft_print_hex_uppercase(n / 16);
-	kopf_schmerzennn += ft_putchar(hex_digits[n % 16]);
-	return (kopf_schmerzennn);
+	{
+		caneta += 32;
+		caneta += ft_print_hex_uppercase(n / 16);
+	}
+	caneta += ft_putchar(hex_digits[n % 16]);
+	return (caneta);
+}
+
+static int	ft_print_hex_uppercase(unsigned long n)
+{
+	char	*hex_digits;
+	int		caneta;
+
+	caneta = 0;
+	hex_digits = "0123456789abcdef";
+	if (n >= 16)
+	{
+		caneta -= 32;
+		caneta += ft_print_hex_uppercase(n / 16);
+	}
+	caneta += ft_putchar(hex_digits[n % 16]);
+	return (caneta);
 }
 
 int	ft_putptr(void *y)
