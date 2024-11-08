@@ -1,11 +1,20 @@
-# Compiler and flags
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/08 18:42:38 by gabriel           #+#    #+#              #
+#    Updated: 2024/11/08 18:42:38 by gabriel          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror $(INCLUDES)
 
-# Output library name
-NAME = libftftprintf.a
+NAME = libftprintf.a
 
-# Source files
 SRC = 	ft_printf.c\
 		ft_putchar.c\
 		ft_putnbr.c\
@@ -16,30 +25,18 @@ SRC = 	ft_printf.c\
 		ft_hex_lower.c\
 		ft_hex_upper.c\
 
-# Object files
 OBJS = $(SRC:.c=.o)
 
-# Default rule
 all: $(NAME)
 
-# Rule to create the static library
-$(NAME): $(OBJS) $(LIBFT)
-	ar rcs $(NAME) $(OBJS) $(LIBFT)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-# Rule to build libft if it’s not already built
-$(LIBFT):
-	make -C libft
-
-# Cleaning object files
 clean:
 	rm -f $(OBJS)
-	make clean -C libft
 
-# Full clean, including the library
 fclean: clean
 	rm -f $(NAME)
-	make fclean -C libft
 
-# Rebuild everything
 re: fclean all
