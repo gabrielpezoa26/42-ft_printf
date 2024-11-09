@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/08 20:07:34 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 21:00:17 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static size_t	ft_verify_type(const char id, va_list arg_box)
 	result = 0;
 	if (id == 'c')
 		result += ft_putchar((unsigned char)va_arg(arg_box, int));
-	/*if (id == 's')
+	if (id == 's')
 		result += ft_putstr(va_arg(arg_box, char *));
 	if (id == 'p')
 		result += ft_putptr(va_arg(arg_box, void *));
@@ -34,7 +34,7 @@ static size_t	ft_verify_type(const char id, va_list arg_box)
 	if (id == 'X')
 		result += ft_print_hex_upper(va_arg(arg_box, unsigned int));
 	if (id == '%')
-		result += ft_putchar('%');*/
+		result += ft_putchar('%');
 	return (result);
 }
 
