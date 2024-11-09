@@ -6,15 +6,15 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/08 21:00:17 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 23:22:17 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	ft_verify_type(const char id, va_list arg_box)
+static int	ft_verify_type(const char id, va_list arg_box)
 {
-	size_t	result;
+	int	result;
 
 	result = 0;
 	if (id == 'c')
@@ -42,8 +42,8 @@ int	ft_printf(const char *format, ...)
 {
 	char	*type;
 	va_list	arg_box;
-	size_t	i;
-	size_t	arg_counter;
+	int		i;
+	int		arg_counter;
 
 	type = "cspdiuxX%";
 	i = 0;
@@ -61,7 +61,5 @@ int	ft_printf(const char *format, ...)
 		i++;
 	}
 	va_end(arg_box);
-	fprintf(stderr, "contador de args: %zu\n", arg_counter);
-	//printf("contador de args: %zu\n", arg_counter);
 	return (arg_counter);
 }
