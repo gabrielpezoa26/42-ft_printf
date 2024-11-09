@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:11:20 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/08 23:22:37 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/09 15:44:33 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 int	ft_putnbr(int n)
 {
 	long	num;
+	int		count;
 
 	num = (long)n;
+	count = 0;
 	if (num < 0)
 	{
-		write(1, "-", 1);
+		count += ft_putchar('-');
 		num = -num;
 	}
 	if (num > 9)
-		ft_putnbr(num / 10);
-	write(1, &((char){num % 10 + '0'}), 1);
-	return (1);
+		count += ft_putnbr(num / 10);
+	count += ft_putchar(num % 10 + '0');
+	return (count);
 }
