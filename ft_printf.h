@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/09 15:56:13 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/09 19:04:01 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int		ft_printf(const char *format, ...);
 int		ft_putstr(char *s);
