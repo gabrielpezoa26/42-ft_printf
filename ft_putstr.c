@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:12:30 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/08 21:09:37 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/08 23:49:10 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ int	ft_putstr(char *s)
 {
 	int	i;
 
+	if (!s)
+		return (ft_putstr("(null)"));
 	i = 0;
 	while (s[i] != '\0')
 	{
 		ft_putchar(s[i]);
 		i++;
 	}
-	i -= 1;
 	return (i);
 }
