@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:33:48 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/09 19:23:12 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/10 14:02:44 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 int	ft_print_hex_lower(unsigned long n)
 {
 	char	*hex_digits_lower;
-	int		result;
+	int		char_count;
 
-	result = 0;
+	char_count = 0;
 	hex_digits_lower = "0123456789abcdef";
 	if (n >= 16)
-		result += ft_print_hex_lower(n / 16);
-	result += ft_putchar(hex_digits_lower[n % 16]);
-	return (result);
+		char_count += ft_print_hex_lower(n / 16);
+	char_count += ft_putchar(hex_digits_lower[n % 16]);
+	return (char_count);
 }

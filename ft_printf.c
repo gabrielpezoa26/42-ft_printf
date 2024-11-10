@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 20:08:55 by gabriel           #+#    #+#             */
-/*   Updated: 2024/11/09 16:01:59 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/10 13:04:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,23 +42,23 @@ int	ft_printf(const char *format, ...)
 {
 	char	*type;
 	va_list	arg_box;
-	int		i;
+	int		index;
 	int		arg_counter;
 
 	type = "cspdiuxX%";
-	i = 0;
+	index = 0;
 	arg_counter = 0;
 	va_start(arg_box, format);
-	while (format[i] != '\0')
+	while (format[index] != '\0')
 	{
-		if ((format[i] == '%') && ft_strchr(type, format[i + 1]))
+		if ((format[index] == '%') && ft_strchr(type, format[index + 1]))
 		{
-			arg_counter += ft_verify_type(format[i + 1], arg_box);
-			i++;
+			arg_counter += ft_verify_type(format[index + 1], arg_box);
+			index++;
 		}
 		else
-			arg_counter += ft_putchar(format[i]);
-		i++;
+			arg_counter += ft_putchar(format[index]);
+		index++;
 	}
 	va_end(arg_box);
 	return (arg_counter);
