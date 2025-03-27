@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/11/11 13:54:39 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/03/23 21:01:59 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,12 @@ int		ft_print_hex_lower(unsigned long n);
 char	*ft_strchr(const char *s, int c);
 
 #endif
+
+/*
+ the main goal of this project is very straightforward, implement the "printf" 
+ function, with the more commonly used identifiers. here we learned what is a
+ variadic function, a bit of control structures, and basic file organization.
+ what i liked about this project is, compared to Libft, we had a bit more of
+ freedom on how to organize the code.
+
+*/
